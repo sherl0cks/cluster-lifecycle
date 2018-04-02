@@ -12,7 +12,7 @@ metadata:
   creationTimestamp: null
   name: ${NAMESPACE}
 objects:
-- apiVersion: v1
+- apiVersion: ${PROJECT_REQUEST_API_VERSION}
   kind: ProjectRequest
   metadata:
     name: ${NAMESPACE}
@@ -30,3 +30,9 @@ parameters:
 - description: Description
   displayName: Description
   name: NAMESPACE_DESCRIPTION
+- description: API version for ProjectRequest
+  displayName: ProjectRequest API version
+  name: PROJECT_REQUEST_API_VERSION
+  value: project.openshift.io/v1
+  required: true
+  
